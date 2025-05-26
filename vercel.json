@@ -29,8 +29,5 @@
         "Access-Control-Allow-Headers": "Content-Type, Authorization"
       }
     }
-  ],
-  "env": {
-    "MONGODB_URI": "@MONGODB_URI"
-  }
+  ]
 }
