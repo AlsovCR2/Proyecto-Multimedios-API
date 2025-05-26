@@ -9,13 +9,25 @@
   "routes": [
     {
       "src": "/register",
-      "methods": ["POST"],
-      "dest": "index.js"
+      "methods": ["POST", "OPTIONS"],
+      "dest": "index.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+        "Access-Control-Allow-Credientials": "true",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization"
+      }
     },
     {
       "src": "/",
-      "methods": ["GET"],
-      "dest": "index.js"
+      "methods": ["GET", "OPTIONS"],
+      "dest": "index.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+        "Access-Control-Allow-Credientials": "true",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization"
+      }
     }
   ],
   "env": {
